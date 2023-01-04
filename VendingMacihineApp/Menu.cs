@@ -12,7 +12,7 @@ namespace VendingMachineCore
             Console.WriteLine();
 
 
-            Console.WriteLine($"Display Screen: {vendingMachinedisplay}");
+            Console.WriteLine($"Display Screen] {vendingMachinedisplay}");
 
             Console.WriteLine("");
 

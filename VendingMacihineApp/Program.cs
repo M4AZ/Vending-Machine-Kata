@@ -93,7 +93,11 @@
                     Console.WriteLine(vendingMachine.Display);
 
                     if (result)
-                        vendingMachine.clear();
+                        vendingMachine.Clear();
+                    else
+                        vendingMachine.UpdateDisplay("INSERT COIN");
+
+
 
 
                 }

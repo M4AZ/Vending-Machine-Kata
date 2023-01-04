@@ -10,7 +10,7 @@ public class AcceptCoins
 
 
 
-    //The vending machine will accept valid coins (5p, 10p, 20p, 50p, £1.00, £2.00) and reject invalid
+    //Reference: The vending machine will accept valid coins (5p, 10p, 20p, 50p, £1.00, £2.00) and reject invalid
     //ones(1p, 2p).
     [Theory]
     [InlineData(Coin.Coins.penny)]
@@ -40,7 +40,7 @@ public class AcceptCoins
 
 
 
-    //When a valid coin is inserted the amount of the coin will be added to the current amount and the
+    //Reference: When a valid coin is inserted the amount of the coin will be added to the current amount and the
     //display will be updated.
     [Theory]
     [InlineData(10, Coin.Coins.pence10)]
@@ -71,7 +71,7 @@ public class AcceptCoins
 
 
 
-    //When there are no coins inserted, the machine displays INSERT COIN.
+    //Reference: When there are no coins inserted, the machine displays INSERT COIN.
     [Fact]
     public void NoCoinsInserted()
     {
@@ -81,7 +81,7 @@ public class AcceptCoins
 
 
 
-    //Rejected coins are placed in the coin return.
+    //Reference: Rejected coins are placed in the coin return.
     [Theory]
     [InlineData(Coin.Coins.penny)]
     [InlineData(Coin.Coins.pence2)]

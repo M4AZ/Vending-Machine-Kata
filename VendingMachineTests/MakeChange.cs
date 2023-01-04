@@ -9,7 +9,7 @@ namespace VendingMachineTests
         private readonly VendingMachine _vendingMachine = new VendingMachine();
 
 
-        //When a product is selected that costs less than the amount of money in the machine, then the
+        //Reference: When a product is selected that costs less than the amount of money in the machine, then the
         //remaining amount is placed in the coin return.
         [Fact]
         public void PlaceCoinsInCoinReturnIfProductCostLessThanAmountInMachine()

@@ -71,7 +71,11 @@ namespace VendingMachineCore
             }
 
             //Check if enough coins are inserted
-            if (CoinsValueInMachine < price)
+            if (CoinsValueInMachine == 0M)
+            {
+                Display = $"INSERT COIN";
+            }
+            else if (CoinsValueInMachine < price)
             {
                 Display = $"PRICE: {(price / 100).ToString("C", new CultureInfo("en-GB"))}";
             }
@@ -93,7 +97,7 @@ namespace VendingMachineCore
         {
             decimal change = 0M;
 
-            if (CoinsValueInMachine > 0 && CoinsValueInMachine > DespensedProductPrice)
+            if (CoinsValueInMachine > 0 && DespensedProductName != "" && CoinsValueInMachine > DespensedProductPrice)
             {
                 change = CoinsValueInMachine - DespensedProductPrice;
 
@@ -154,14 +158,18 @@ namespace VendingMachineCore
             return change;
         }
 
-        public void clear()
+        public void Clear()
         {
             Display = "INSERT COIN";
             DespensedProductName = "";
             DespensedProductPrice = 0M;
             TotalChange = 0M;
             CoinsValueInMachine = 0M;
+        }
 
+        public void UpdateDisplay(string text)
+        {
+            Display = text;
 
         }
 

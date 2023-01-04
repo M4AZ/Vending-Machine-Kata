@@ -10,7 +10,7 @@ namespace VendingMachineTests
 
 
 
-        //When the respective button is pressed and enough money has been inserted, the product is
+        //Reference : When the respective button is pressed and enough money has been inserted, the product is
         //dispensed and the machine displays THANK YOU.
         [Fact]
         public void DispenseProductOnEnoughMoney()
@@ -28,7 +28,7 @@ namespace VendingMachineTests
         }
 
 
-        //If the display is checked again, it will display INSERT COIN and the current amount will be set to
+        //Reference: If the display is checked again, it will display INSERT COIN and the current amount will be set to
         //£0.00.
         [Fact]
         public void ResetDisplayOnSuccessfulPurchase()
@@ -45,7 +45,7 @@ namespace VendingMachineTests
             _vendingMachine.Display.Should().Be("THANK YOU");
             _vendingMachine.DespensedProductName.Should().NotBeEmpty();
 
-            _vendingMachine.clear();
+            _vendingMachine.Clear();
             _vendingMachine.Display.Should().Be("INSERT COIN");
             _vendingMachine.CoinsValueInMachine.Should().Be(0M);
 
@@ -53,7 +53,7 @@ namespace VendingMachineTests
 
 
 
-        //If there is not enough money inserted then the machine displays PRICE and the price of the item
+        //Reference: If there is not enough money inserted then the machine displays PRICE and the price of the item
         [Fact]
         public void DispenseProductOnNotEnoughMoney()
         {
